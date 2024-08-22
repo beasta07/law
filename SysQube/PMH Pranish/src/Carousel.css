@@ -1,0 +1,19 @@
+/* carousel.css */
+.slick-prev, .slick-next {
+
+}
+
+.slick-prev {
+  left: 10px; /* Adjust position as needed */
+  z-index: 1;
+}
+
+.slick-next {
+  right: 20px; /* Adjust position as needed */
+  z-index: 1;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 34px; /* Adjust icon size */
+  color: #fff; /* Change to your preferred icon color */
+}
