@@ -5,7 +5,7 @@ const VerifyEmail = () => {
     <div>
       <div className='min-h-screen flex flex-col '>
         <div className='mt-16'>
-          <img src='/public/images/Auth/email.jpg' className='w-72 mx-auto' alt='Verify Email' />
+          <img src='/images/Auth/email.jpg' className='w-72 mx-auto' alt='Verify Email' />
         </div>
         <div className='bg-white text-center w-full sm:w-[30rem] mb-8 mx-auto px-4 sm:px-10'>
           <p className='text-center text-2xl font-medium text-gray-800 mt-6'>Verify your email address</p>

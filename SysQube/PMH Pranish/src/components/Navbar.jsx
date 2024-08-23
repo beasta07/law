@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState , useRef } from "react";
 import Header from "./Header";
 import { IoIosSearch } from "react-icons/io";
 import { IoCartOutline, IoLocationOutline } from "react-icons/io5";
@@ -13,13 +13,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import { BsTelephone } from "react-icons/bs";
 import { GoMail } from "react-icons/go";
 import { IoStorefrontOutline } from "react-icons/io5";
+import { useOnClickOutside } from './useOnClickOutside'; // custom hook to handle clicks outside the dropdown
 
 const Navbar = () => {
   const [offScreenNav, setOffScreenNav] = useState(false);
   const [isDropdownVisible, setDropdownVisible] = useState(false);
   const [isCategoryVisible, setCategoryVisible] = useState(false);
   const [cart, setCart] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
+  useOnClickOutside(dropdownRef, () => setIsOpen(false));
   // Function to load cart items from localStorage
   const loadCart = () => {
     const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
@@ -55,6 +59,9 @@ const Navbar = () => {
   const toggleNav = () => {
     setOffScreenNav(!offScreenNav);
   };
+  const handleIsOpen = () => {
+    setIsOpen(!isOpen)
+  }
 
   const categories = [
     { name: "Phone Case", path: "/" },
@@ -110,7 +117,7 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="Search..."
-            className="p-1 lg:p-2 md:w-96 px-2 rounded-l-xl border-r border-[#0D4C90] focus:outline-none"
+            className="p-1 lg:p-2 md:w-96 px-2 rounded-l-xl border-r focus:outline-none"
           />
           <button className="bg-[#0D4C90] rounded-r">
             <IoIosSearch className="text-2xl text-white mx-3 " />
@@ -118,15 +125,19 @@ const Navbar = () => {
         </div>
 
         <div className="flex lg:hidden items-center gap-4 mb-1 text-xl">
+            <FiUser />
+          
           <Link to="/wishlist">
             <IoMdHeartEmpty />
           </Link>
+          
           <div className="relative">
             <Link to="/cart">
               <IoCartOutline />
             </Link>
+            
             {cart?.length > 0 && (
-              <div className="text-sm bg-yellow-300 absolute -top-3 -right-2 border rounded-md px-1">
+              <div className="text-sm bg-red-300 absolute -top-3 -right-2 border rounded-md px-1">
                 {cart.length}
               </div>
             )}
@@ -134,6 +145,7 @@ const Navbar = () => {
           <Link>
             <FiUser />
           </Link>
+          
         </div>
 
         <div className="lg:hidden">
@@ -222,20 +234,49 @@ const Navbar = () => {
             </ul>
           </div> */}
         </div>
-
+          {/* NAV BAR COMPONENTS */}
         <div className="lg:flex hidden gap-1 md:gap-4 text-2xl">
-          <Link to="/wishlist">
+          <Link to="/wishlist" className="">
             <IoMdHeartEmpty />
           </Link>
-          <Link>
+
+          <div className="relative" ref={dropdownRef}>
+          <button
+      
+        onClick={handleIsOpen}
+      >
             <FiUser />
-          </Link>
-          <div className="relative">
+            </button>            
+            {isOpen && (
+        <div className="absolute right-0 mt-2 w-48 z-[999] text-base  bg-white border border-gray-200 shadow-lg rounded-lg" onClick={handleIsOpen}>
+          <ul>
+            <li>
+              <Link to='/userAccount'>
+              
+              <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">My Account</a>
+              </Link>
+            </li>
+            <li>
+              <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">My Orders</a>
+            </li>
+            <li>
+              <Link to='signin'>
+              <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Logout</a>
+              
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
+    </div>     
+
+
+     <div className="relative">
             <Link to="/cart">
               <IoCartOutline />
             </Link>
             {cart?.length > 0 && (
-              <div className="text-sm bg-yellow-300 absolute -top-3 -right-2 border rounded-md px-1">
+              <div className="text-sm bg-yellow-300  absolute -top-3 -right-2 border rounded-md px-1">
                 {cart.length}
               </div>
             )}

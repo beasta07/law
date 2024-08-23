@@ -194,7 +194,7 @@ const Header = () => {
             </Link>
           </li>
           <li className="mb-6">
-            <Link onClick={toggleMenu} className="flex items-center gap-2" to="/">
+            <Link onClick={toggleMenu} className="flex items-center gap-2" to="/contact">
               <BsTelephone />
               Contact
             </Link>

@@ -166,7 +166,7 @@ const Shipping = () => {
           </div>
 
           <div className="md:w-[40%] mt-8 md:mt-0">
-            <div className="border border-gray-300 shadow rounded overflow-y-scroll h-[36rem] p-5 px-7 sticky top-8">
+            <div className="border border-gray-300 shadow rounded overflow-y-scroll  p-5 px-7 sticky top-8">
               <h2 className="font-medium text-xl mb-5">Order Summary</h2>
               <div>
                 {cartItems.map((item, index) => (
@@ -182,6 +182,8 @@ const Shipping = () => {
                       </div>
                     </div>
 
+                  </div>
+                ))}
                     <div>
                          <div className="flex justify-between py-5 border-b">
                               <p className="font-medium">Subtotal</p>
@@ -192,8 +194,6 @@ const Shipping = () => {
                               <p>{subtotal}</p>
                          </div>
                     </div>
-                  </div>
-                ))}
                 {/* <div className="flex items-center justify-between border-b border-gray-300 pb-2">
                   <div>
                     <p>SubTotal:</p>

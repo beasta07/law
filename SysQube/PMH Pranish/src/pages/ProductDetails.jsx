@@ -4,7 +4,6 @@ import { CiHeart, CiCirclePlus, CiDeliveryTruck } from "react-icons/ci";
 import { PiKeyReturnLight } from "react-icons/pi";
 import { AiOutlineSecurityScan } from "react-icons/ai";
 import { SiTicktick } from "react-icons/si";
-// import Magnifier from "react-magnifier";
 import { Link } from "react-router-dom";
 
 const ProductDetails = () => {
@@ -125,9 +124,10 @@ const ProductDetails = () => {
               </div>
             ))}
           </div>
+      
           <div className="flex-1 w-full md:w-1/2 flex-col justify-center mb-4 md:mb-0">
-            {/* <div className="relative w-full aspect-[5/5]">
-              <Magnifier
+            <div className="relative w-full aspect-[5/5]">
+              {/* <Magnifier
                 src={currentImage}
                 // width="100%"
                 // zoomImgSrc={currentImage}
@@ -139,8 +139,8 @@ const ProductDetails = () => {
                 // mgMouseOffsetY={0}
                 className="w-full object-cover object-top mb-4 rounded-xl"
                 alt="Product Display"
-              />
-            </div> */}
+              /> */}
+            </div>
             <div className="flex lg:hidden gap-3">
               {imageDescriptions.map((description, index) => (
                 <div key={index} className="description-container">

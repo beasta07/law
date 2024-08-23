@@ -24,6 +24,9 @@ import FAQ from "./pages/FAQ";
 import ForgetPassword from "./pages/Auth/ForgetPassword";
 import ConfirmPassword from "./pages/Auth/ConfirmPassword";
 import VerifyEmail from "./pages/Auth/VerifyEmail";
+import UserSettings from "./pages/UserSettings";
+import UserAccount from "./pages/UserAccount";
+import MyAddress from "./components/MyAddress";
 
 export default function App() {
   const ScrollToTop = () => {
@@ -65,7 +68,10 @@ export default function App() {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/forgetPassword" element={<ForgetPassword />} />
           <Route path="/confirmPassword" element={<ConfirmPassword />} />
+          <Route path="/userSettings" element={<UserSettings />} />
+          <Route path="/userAccount" element={<UserAccount />} />
           <Route path="/verifyEmail" element={<VerifyEmail />} />
+          <Route path="/myAddress" element={<MyAddress />} />
 
 
 

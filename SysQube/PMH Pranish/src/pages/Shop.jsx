@@ -11,12 +11,16 @@ import "../App.css";
 import ResponsivePagination from "react-responsive-pagination";
 import "react-responsive-pagination/themes/classic.css";
 import "./pagination.css";
+import { useOnClickOutside } from '../components/useonClickOutside'; // custom hook to handle clicks outside the dropdown
 
 const Shop = () => {
   const [FilterSelect, setFilterSelect] = useState(null);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [currentPage, setCurrentPage] = useState(8);
   const totalPages = 3;
+  const dropdownRef = useRef(null);
+
+  useOnClickOutside(dropdownRef, () => setIsOpen(false));
 
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("Sort By");
@@ -374,10 +378,10 @@ const Shop = () => {
             <div className="md:w-[70%]">
               <div className="flex justify-between my-4 mt-16 ">
                 <div className="flex items-center lg:gap-4 gap-1">
-                  <div className="font-medium">Show: </div>
+                  <div  className="font-medium"  >Show: </div>
                   <div
                     className="relative border cursor-pointer border-gray-400 rounded-lg items-center p-1 px-2 flex lg:gap-1"
-                    onClick={() => setShow(!show)}
+                    onClick={() => setShow(!show)}   ref={dropdownRef}
                   >
                     <span className="">{selectedValue}</span>
                     <MdOutlineKeyboardArrowDown className="text-xl" />
@@ -409,7 +413,7 @@ const Shop = () => {
                 </div>
                 <div className="flex gap-4">
                   {/* <span className='text-gray-500 mt-3'>Showing the single result</span> */}
-                  <div className="relative">
+                  <div className="relative"  ref={dropdownRef}>
                     <div
                       className="border border-gray-400 flex lg:gap-2 gap-1 p-2 pl-3 rounded-full lg:font-semibold cursor-pointer "
                       onClick={toggleDropdown}
