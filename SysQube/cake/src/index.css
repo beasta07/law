@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Cyrene";
+  src: url('/src/fonts/Cyrene Regular.otf') format('opentype');
+}
+
+.root {
+  font-family: "Cyrene", sans-serif;
+  font-family: "Poppins", serif;
+}
