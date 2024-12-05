@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* index.css or global.css */
+@font-face {
+  font-family: 'Danymeka';
+  src: url('./fonts/danymeka/Danymeka.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cyrene';
+  src: url('./fonts/Cyrene/Cyrene Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
