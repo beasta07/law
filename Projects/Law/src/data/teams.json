@@ -1,0 +1,38 @@
+[
+     {
+          "id":1,
+          "name": "Andrew James",
+          "jobTitle": "Interior Designer",
+          "image": "/images/ForTeams/teams1.jpg"
+     },
+     {
+          "id":2,
+          "name": "Anna Jones",
+          "jobTitle": "Finance Officer",
+          "image": "/images/ForTeams/teams2.jpg"
+     },
+     {
+          "id":3,
+          "name": "Ronaldo Richard",
+          "jobTitle": "Designer",
+          "image": "/images/ForTeams/teams3.jpg"
+     },
+     {
+          "id":4,
+          "name": "Messi James",
+          "jobTitle": "App Developer",
+          "image": "/images/ForTeams/teams4.jpg"
+     },
+     {
+          "id":5,
+          "name": "Courtney Henry",
+          "jobTitle": "App Developer",
+          "image": "/images/ForTeams/teams5.jpg"
+     },
+     {
+          "id":6,
+          "name": "James Richard",
+          "jobTitle": "App Developer",
+          "image": "/images/ForTeams/teams6.jpg"
+     }
+]

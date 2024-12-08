@@ -1,0 +1,33 @@
+[
+     {
+       "id": 1,
+       "name": "Legal Services",
+       "image": "/images/ForService/service1.jpg",
+       "description": "Specializing in commercial litigation, legal consultation in commercial law, and business registration. Services include company compliance, intellectual property registration, and foreign investment approvals."
+     },
+     {
+       "id": 2,
+       "name": "Accounting Services",
+       "image": "/images/ForService/service2.jpg",
+       "description": "Offering statutory audits, internal audits, financial consulting, tax consulting, and business restructuring services tailored to your needs."
+     },
+     {
+       "id": 3,
+       "name": "Personnel Services",
+       "image": "/images/ForService/service3.jpg",
+       "description": "Expert legal drafting, contract reviews, and compliance support for corporate and labor laws. Specialized in dispute resolution and insolvency proceedings."
+     },
+     {
+       "id": 4,
+       "name": "Financial Consulting",
+       "image": "/images/ForService/service4.jpg",
+       "description": "Providing strategic planning, investment management, feasibility studies, and risk advisory services to streamline financial operations."
+     },
+     {
+       "id": 5,
+       "name": "Corporate Compliance",
+       "image": "/images/ForService/service5.jpg",
+       "description": "Ensuring compliance with local and international laws, merger and acquisition advisory, and corporate salary management."
+     }
+   ]
+   

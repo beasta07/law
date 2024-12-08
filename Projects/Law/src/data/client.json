@@ -1,0 +1,20 @@
+[
+     {
+          "id": 1,
+          "name": "John Deo",
+          "words": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi cons equatur uis dolorem.",
+          "image": "/images/ForClients/clients1.jpg"
+     },
+     {
+          "id": 2,
+          "name": "Sara Joshi",
+          "words": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi cons equatur uis dolorem.",
+          "image": "/images/ForClients/clients2.jpg"
+     },
+     {
+          "id": 3,
+          "name": "Crish Brown",
+          "words": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi cons equatur uis dolorem.",
+          "image": "/images/ForClients/clients3.jpg"
+     }
+]
